@@ -1,15 +1,17 @@
 <!doctype html>
+<!-- Token Radar's page shell: the board is rendered into #board by app.js from ../data.js. -->
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Token Radar: pre-token protocols ranked by implied value</title>
-<link rel="stylesheet" href="app.css">
-</head>
-<body>
-<a class="skip" href="#board">Skip to the board</a>
-<main id="board" tabindex="-1" aria-busy="true"></main>
-<script src="../data.js"></script>
-<script src="app.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>Token Radar: pre-token protocols ranked by implied value</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="app.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="#board" class="skip">Skip to the board</a>
+    <!-- app.js fills this element; aria-busy clears once the first render lands. -->
+    <main id="board" aria-busy="true" tabindex="-1"></main>
+    <script src="../data.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
